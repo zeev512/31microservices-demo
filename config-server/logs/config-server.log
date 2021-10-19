@@ -1,146 +1,241 @@
-2021-10-18 08:38:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
-2021-10-18 08:38:50 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 64820 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
-2021-10-18 08:38:50 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
-2021-10-18 08:38:51 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
-2021-10-18 08:38:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2021-10-18 08:38:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-10-18 08:38:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2021-10-18 08:38:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 08:38:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-10-18 08:38:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1098 ms
-2021-10-18 08:38:54 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
-2021-10-18 08:38:54 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
-2021-10-18 08:38:54 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
-2021-10-18 08:38:54 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d07aacc, org.springframework.security.web.context.SecurityContextPersistenceFilter@1760e594, org.springframework.security.web.header.HeaderWriterFilter@6fbe4800, org.springframework.security.web.csrf.CsrfFilter@6abb7b7d, org.springframework.security.web.authentication.logout.LogoutFilter@298e002d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@9e50283, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@15e5246, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@ff5d4f1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2673487b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@143413cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60f9dc7e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@194224ca, org.springframework.security.web.session.SessionManagementFilter@1179fc8c, org.springframework.security.web.access.ExceptionTranslationFilter@6e981e78, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f7a20da]
-2021-10-18 08:38:54 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-10-18 08:38:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-10-18 08:38:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-18 08:38:54 [main] INFO  i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.331 seconds (JVM running for 4.818)
-2021-10-18 13:11:16 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
-2021-10-18 13:11:16 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 93974 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
-2021-10-18 13:11:16 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
-2021-10-18 13:11:17 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
-2021-10-18 13:11:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2021-10-18 13:11:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:11:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2021-10-18 13:11:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 13:11:17 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-10-18 13:11:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1127 ms
-2021-10-18 13:11:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
-2021-10-18 13:11:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
-2021-10-18 13:11:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
-2021-10-18 13:11:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cdfa824, org.springframework.security.web.context.SecurityContextPersistenceFilter@14590fe2, org.springframework.security.web.header.HeaderWriterFilter@12aa381f, org.springframework.security.web.csrf.CsrfFilter@498a4d62, org.springframework.security.web.authentication.logout.LogoutFilter@280ecc33, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4db728df, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@298e002d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@18db3b3c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71fb8301, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2299d903, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2807cf3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@318e3942, org.springframework.security.web.session.SessionManagementFilter@1bec1589, org.springframework.security.web.access.ExceptionTranslationFilter@503556cb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@194224ca]
-2021-10-18 13:11:20 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-10-18 13:11:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:11:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-18 13:11:20 [main] INFO  i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.225 seconds (JVM running for 4.674)
-2021-10-18 13:13:02 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
-2021-10-18 13:13:02 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 94114 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
-2021-10-18 13:13:02 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
-2021-10-18 13:13:03 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
-2021-10-18 13:13:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2021-10-18 13:13:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:13:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2021-10-18 13:13:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 13:13:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-10-18 13:13:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1117 ms
-2021-10-18 13:13:06 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
-2021-10-18 13:13:06 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
-2021-10-18 13:13:06 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
-2021-10-18 13:13:06 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68a5aadd, org.springframework.security.web.context.SecurityContextPersistenceFilter@60f9dc7e, org.springframework.security.web.header.HeaderWriterFilter@52285a5f, org.springframework.security.web.csrf.CsrfFilter@6ec3d8e4, org.springframework.security.web.authentication.logout.LogoutFilter@70cf7d1e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2673487b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@70c56434, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1c2096c6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@74bdfa0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@503556cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2299d903, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a89414e, org.springframework.security.web.session.SessionManagementFilter@224e6e88, org.springframework.security.web.access.ExceptionTranslationFilter@146f3d22, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4cd7e993]
-2021-10-18 13:13:06 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-10-18 13:13:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:13:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-18 13:13:06 [main] INFO  i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.46 seconds (JVM running for 4.909)
-2021-10-18 13:13:39 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-18 13:13:39 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2021-10-18 13:13:39 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2021-10-18 13:17:41 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
-2021-10-18 13:17:41 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 94515 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
-2021-10-18 13:17:41 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
-2021-10-18 13:17:42 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
-2021-10-18 13:17:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2021-10-18 13:17:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:17:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2021-10-18 13:17:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 13:17:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-10-18 13:17:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1114 ms
-2021-10-18 13:17:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
-2021-10-18 13:17:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
-2021-10-18 13:17:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
-2021-10-18 13:17:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d37aa0f, org.springframework.security.web.context.SecurityContextPersistenceFilter@b9b97ad, org.springframework.security.web.header.HeaderWriterFilter@632d4cf2, org.springframework.security.web.csrf.CsrfFilter@146f3d22, org.springframework.security.web.authentication.logout.LogoutFilter@52657d5f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@c94bd18, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@58fbcb71, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6076c66, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@65d7eea4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@298e002d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@536da29c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@485c84d7, org.springframework.security.web.session.SessionManagementFilter@542ff147, org.springframework.security.web.access.ExceptionTranslationFilter@70c56434, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c2096c6]
-2021-10-18 13:17:45 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-10-18 13:17:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:17:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-18 13:17:45 [main] INFO  i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.423 seconds (JVM running for 4.876)
-2021-10-18 13:17:53 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-18 13:17:53 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2021-10-18 13:17:53 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2021-10-18 13:22:45 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
-2021-10-18 13:22:45 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 94801 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
-2021-10-18 13:22:45 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
-2021-10-18 13:22:45 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
-2021-10-18 13:22:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2021-10-18 13:22:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:22:46 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2021-10-18 13:22:46 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 13:22:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-10-18 13:22:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1133 ms
-2021-10-18 13:22:48 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
-2021-10-18 13:22:48 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
-2021-10-18 13:22:48 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
-2021-10-18 13:22:48 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69a73867, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a82bc58, org.springframework.security.web.header.HeaderWriterFilter@57b1ec84, org.springframework.security.web.csrf.CsrfFilter@298e002d, org.springframework.security.web.authentication.logout.LogoutFilter@a0d875d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d53e876, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@11ad095c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@749d7c01, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@16a09809, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6210666c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65af05b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d3a03fe, org.springframework.security.web.session.SessionManagementFilter@5cbe95b1, org.springframework.security.web.access.ExceptionTranslationFilter@1de85972, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22aefae0]
-2021-10-18 13:22:48 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-10-18 13:22:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:22:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-18 13:22:48 [main] INFO  i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.478 seconds (JVM running for 4.936)
-2021-10-18 13:23:00 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-18 13:23:00 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2021-10-18 13:23:00 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2021-10-18 13:28:28 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
-2021-10-18 13:28:28 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 95214 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
-2021-10-18 13:28:28 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
-2021-10-18 13:28:29 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
-2021-10-18 13:28:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2021-10-18 13:28:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:28:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2021-10-18 13:28:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 13:28:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-10-18 13:28:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1089 ms
-2021-10-18 13:28:30 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configServerHealthIndicator' defined in class path resource [org/springframework/cloud/config/server/config/EnvironmentRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'configServerHealthIndicator' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.config.server.config.CompositeConfiguration': Unsatisfied dependency expressed through method 'setEnvironmentRepos' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: You need to configure a uri for the git repository.
-2021-10-18 13:28:30 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2021-10-18 13:28:30 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+2021-10-19 08:56:41 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
+2021-10-19 08:56:41 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 117976 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
+2021-10-19 08:56:41 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
+2021-10-19 08:56:42 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
+2021-10-19 08:56:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2021-10-19 08:56:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2021-10-19 08:56:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-19 08:56:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-19 08:56:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-19 08:56:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1111 ms
+2021-10-19 08:56:47 [main] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Error occured cloning to base directory.
+org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:254)
+	at org.eclipse.jgit.api.CloneCommand.fetch(CloneCommand.java:306)
+	at org.eclipse.jgit.api.CloneCommand.call(CloneCommand.java:200)
+	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.cloneToBasedir(JGitEnvironmentRepository.java:613)
+	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.initClonedRepository(JGitEnvironmentRepository.java:335)
+	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.afterPropertiesSet(JGitEnvironmentRepository.java:254)
+	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.afterPropertiesSet(MultipleJGitEnvironmentRepository.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:760)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:671)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1300)
+	at org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration.healthContributorRegistry(HealthEndpointConfiguration.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)
+	at il.co.migdal.ins.config.server.ConfigServer.main(ConfigServer.java:12)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:544)
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:362)
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:137)
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:123)
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1271)
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:243)
+	... 84 common frames omitted
+2021-10-19 08:56:47 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configServerHealthIndicator' defined in class path resource [org/springframework/cloud/config/server/config/EnvironmentRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'configServerHealthIndicator' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.config.server.config.CompositeConfiguration': Unsatisfied dependency expressed through method 'setEnvironmentRepos' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+2021-10-19 08:56:47 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2021-10-19 08:56:47 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-10-18 13:28:30 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Invalid config server configuration.
-
-Action:
-
-If you are using the git profile, you need to set a Git URI in your configuration.  If you are using a native profile and have spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
-
-2021-10-18 13:33:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
-2021-10-18 13:33:12 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 95459 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
-2021-10-18 13:33:12 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
-2021-10-18 13:33:13 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
-2021-10-18 13:33:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2021-10-18 13:33:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:33:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2021-10-18 13:33:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 13:33:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-10-18 13:33:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1091 ms
-2021-10-18 13:33:16 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
-2021-10-18 13:33:16 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
-2021-10-18 13:33:16 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
-2021-10-18 13:33:16 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@315cf170, org.springframework.security.web.context.SecurityContextPersistenceFilter@64f3991e, org.springframework.security.web.header.HeaderWriterFilter@1de08775, org.springframework.security.web.csrf.CsrfFilter@7d90644f, org.springframework.security.web.authentication.logout.LogoutFilter@3451fc88, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1ff463bb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@503a7990, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7878bbdb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1be77a76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35e689a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e4ecdf8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25f7cc38, org.springframework.security.web.session.SessionManagementFilter@21a5b599, org.springframework.security.web.access.ExceptionTranslationFilter@6b091a92, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7bce9ce4]
-2021-10-18 13:33:16 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-10-18 13:33:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-10-18 13:33:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-18 13:33:16 [main] INFO  i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.368 seconds (JVM running for 4.864)
+2021-10-19 08:56:47 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configServerHealthIndicator' defined in class path resource [org/springframework/cloud/config/server/config/EnvironmentRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'configServerHealthIndicator' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.config.server.config.CompositeConfiguration': Unsatisfied dependency expressed through method 'setEnvironmentRepos' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)
+	at il.co.migdal.ins.config.server.ConfigServer.main(ConfigServer.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configServerHealthIndicator' defined in class path resource [org/springframework/cloud/config/server/config/EnvironmentRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'configServerHealthIndicator' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.config.server.config.CompositeConfiguration': Unsatisfied dependency expressed through method 'setEnvironmentRepos' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configServerHealthIndicator' defined in class path resource [org/springframework/cloud/config/server/config/EnvironmentRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'configServerHealthIndicator' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.config.server.config.CompositeConfiguration': Unsatisfied dependency expressed through method 'setEnvironmentRepos' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:671)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1300)
+	at org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration.healthContributorRegistry(HealthEndpointConfiguration.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.config.server.config.CompositeConfiguration': Unsatisfied dependency expressed through method 'setEnvironmentRepos' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:760)
+	... 63 common frames omitted
+Caused by: org.eclipse.jgit.api.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:254)
+	at org.eclipse.jgit.api.CloneCommand.fetch(CloneCommand.java:306)
+	at org.eclipse.jgit.api.CloneCommand.call(CloneCommand.java:200)
+	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.cloneToBasedir(JGitEnvironmentRepository.java:613)
+	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.initClonedRepository(JGitEnvironmentRepository.java:335)
+	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.afterPropertiesSet(JGitEnvironmentRepository.java:254)
+	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.afterPropertiesSet(MultipleJGitEnvironmentRepository.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 76 common frames omitted
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/zeev512/spring-cloud-config-server-repository: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:544)
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:362)
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:137)
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:123)
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1271)
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:243)
+	... 84 common frames omitted
+2021-10-19 09:05:32 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
+2021-10-19 09:05:32 [main] INFO  i.c.m.ins.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on localhost.localdomain with PID 118521 (/home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices/config-server/target/classes started by zeev in /home/zeev/workspaces/k8s/zeev/aligelenler/eventmicroservices)
+2021-10-19 09:05:32 [main] INFO  i.c.m.ins.config.server.ConfigServer - No active profile set, falling back to default profiles: default
+2021-10-19 09:05:33 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=c5b48b23-08e7-3d2a-b5cf-14bdfccf1275
+2021-10-19 09:05:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2021-10-19 09:05:33 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2021-10-19 09:05:33 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-19 09:05:33 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-19 09:05:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-19 09:05:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1221 ms
+2021-10-19 09:05:35 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
+2021-10-19 09:05:35 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
+2021-10-19 09:05:35 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
+2021-10-19 09:05:35 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7878bbdb, org.springframework.security.web.context.SecurityContextPersistenceFilter@39e3ea78, org.springframework.security.web.header.HeaderWriterFilter@2dbf2da, org.springframework.security.web.csrf.CsrfFilter@f810c18, org.springframework.security.web.authentication.logout.LogoutFilter@1e0294a7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b9c9b8b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@69a90b81, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@25f7cc38, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@315cf170, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43b6cb1c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@503a7990, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@563263a, org.springframework.security.web.session.SessionManagementFilter@7db162f2, org.springframework.security.web.access.ExceptionTranslationFilter@6996bbc4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d2046bb]
+2021-10-19 09:05:36 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-10-19 09:05:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2021-10-19 09:05:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2021-10-19 09:05:36 [main] INFO  i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.667 seconds (JVM running for 5.111)
+2021-10-19 09:05:57 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-19 09:05:57 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-19 09:05:57 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms

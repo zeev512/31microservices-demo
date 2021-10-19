@@ -1,0 +1,137 @@
+Hi Ali,
+I guess you didn't receive my last message, so I send it again.
+I think there is a problem with message size, probably too long log of output.
+Hope this time it will succeed.
+The matter is that I made some investigation for Spring v.2.4,
+and I tryied to use application.properties file instead of bootstrap.yml in config-server module.
+(as per suggestion of Spring Cloud team, please see this article:
+https://www.baeldung.com/spring-cloud-configuration)
+And this was working. When I try bootstrap.yml instead (as per your reply)
+Then I get the error described below.
+The issue I face this time is that when ConfigServer runs within kafka_cluster
+I fail with the permissions on its log directory.
+Probable `volumes` entry doesn't provide necessary permission to write to the logs.
+I placed the code into git under public repository for your review:
+https://github.com/zeev512/31microservices-demo
+
+Please advice what can be done in services.yml file for docker-compose.
+Also, if you prefer to post the questions under Q&A section of your course I will
+repost this message under Section 5. Lecture 31.
+
+Thank you very much.
+
+1. Running ConfigServer with bootstrap.yml file from within IntelliJ - output
+2021-10-18 13:28:29 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1089 ms
+2021-10-18 13:28:30 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configServerHealthIndicator' defined in class path resource [org/springframework/cloud/config/server/config/EnvironmentRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'configServerHealthIndicator' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.config.server.config.CompositeConfiguration': Unsatisfied dependency expressed through method 'setEnvironmentRepos' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: You need to configure a uri for the git repository.
+2021-10-18 13:28:30 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2021-10-18 13:28:30 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-10-18 13:28:30 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you are using a native profile and have spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+
+Process finished with exit code 1
+
+2. Running ConfigServer with application.properties file from IntelliJ - output: 
+   (as suggested in https://www.baeldung.com/spring-cloud-configuration)
+2021-10-18 13:11:17 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1127 ms
+2021-10-18 13:11:19 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
+2021-10-18 13:11:19 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
+2021-10-18 13:11:19 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
+2021-10-18 13:11:19 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cdfa824, org.springframework.security.web.context.SecurityContextPersistenceFilter@14590fe2, org.springframework.security.web.header.HeaderWriterFilter@12aa381f, org.springframework.security.web.csrf.CsrfFilter@498a4d62, org.springframework.security.web.authentication.logout.LogoutFilter@280ecc33, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4db728df, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@298e002d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@18db3b3c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71fb8301, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2299d903, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2807cf3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@318e3942, org.springframework.security.web.session.SessionManagementFilter@1bec1589, org.springframework.security.web.access.ExceptionTranslationFilter@503556cb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@194224ca]
+2021-10-18 13:11:20 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-10-18 13:11:20 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2021-10-18 13:11:20 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2021-10-18 13:11:20 INFO  [main] i.c.m.ins.config.server.ConfigServer - Started ConfigServer in 4.225 seconds (JVM running for 4.674)
+
+CLI test:
+[zeev@localhost ~]$ curl http://localhost:8888
+{"timestamp":"2021-10-18T10:23:00.590+00:00","status":401,"error":"Unauthorized","message":"","path":"/"}
+
+
+3. Building and running ConfigServer image with application.properties file from within docker-compose - terminal output:
+config-server_1             | 09:20:11,112 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+config-server_1             | 09:20:11,113 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+config-server_1             | 09:20:11,114 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/workspace/BOOT-INF/classes/logback.xml]
+config-server_1             | 09:20:11,200 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+config-server_1             | 09:20:11,206 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@639c2c1d - Adding [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/logback-common.xml] to configuration watch list.
+config-server_1             | 09:20:11,206 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@5fe94a96 - URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/logback-common.xml] is not of type file
+config-server_1             | 09:20:11,211 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+config-server_1             | 09:20:11,214 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+config-server_1             | 09:20:11,295 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+config-server_1             | 09:20:11,295 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+config-server_1             | 09:20:11,295 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+config-server_1             | 09:20:11,296 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+config-server_1             | 09:20:11,301 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+config-server_1             | 09:20:11,322 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1144068272 - No compression will be used
+config-server_1             | 09:20:11,323 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1144068272 - Will use the pattern ./config-server/logs/archived/config-server-log.%d{yyyy-MM-dd}.%i.log for the active file
+config-server_1             | 09:20:11,326 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@765d7657 - The date pattern is 'yyyy-MM-dd' from file name pattern './config-server/logs/archived/config-server-log.%d{yyyy-MM-dd}.%i.log'.
+config-server_1             | 09:20:11,326 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@765d7657 - Roll-over at midnight.
+config-server_1             | 09:20:11,331 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@765d7657 - Setting initial period to Mon Oct 18 09:20:11 UTC 2021
+config-server_1             | 09:20:11,331 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@765d7657 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+config-server_1             | 09:20:11,331 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@765d7657 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+config-server_1             | 09:20:11,334 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: ./config-server/logs/config-server.log
+config-server_1             | 09:20:11,334 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [./config-server/logs/config-server.log]
+config-server_1             | 09:20:11,335 |-ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - openFile(./config-server/logs/config-server.log,true) call failed. java.io.FileNotFoundException: ./config-server/logs/config-server.log (Permission denied)
+config-server_1             | 	at java.io.FileNotFoundException: ./config-server/logs/config-server.log (Permission denied)
+config-server_1             | 	at 	at java.base/java.io.FileOutputStream.open0(Native Method)
+config-server_1             | 	at 	at java.base/java.io.FileOutputStream.open(Unknown Source)
+config-server_1             | 	at 	at java.base/java.io.FileOutputStream.<init>(Unknown Source)
+config-server_1             | 	at 	at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+config-server_1             | 	at 	at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+config-server_1             | 	at 	at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+config-server_1             | 	at 	at ch.qos.logback.core.rolling.RollingFileAppender.start(RollingFileAppender.java:100)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+config-server_1             | 	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+config-server_1             | 	at 	at ch.qos.logback.classic.util.ContextInitializer.configureByResource(ContextInitializer.java:75)
+config-server_1             | 	at 	at ch.qos.logback.classic.util.ContextInitializer.autoConfig(ContextInitializer.java:150)
+config-server_1             | 	at 	at org.slf4j.impl.StaticLoggerBinder.init(StaticLoggerBinder.java:84)
+config-server_1             | 	at 	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:55)
+config-server_1             | 	at 	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+config-server_1             | 	at 	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+config-server_1             | 	at 	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:417)
+config-server_1             | 	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:362)
+config-server_1             | 	at 	at org.apache.commons.logging.LogAdapter$Slf4jAdapter.createLocationAwareLog(LogAdapter.java:130)
+config-server_1             | 	at 	at org.apache.commons.logging.LogAdapter.createLog(LogAdapter.java:91)
+config-server_1             | 	at 	at org.apache.commons.logging.LogFactory.getLog(LogFactory.java:67)
+config-server_1             | 	at 	at org.apache.commons.logging.LogFactory.getLog(LogFactory.java:59)
+config-server_1             | 	at 	at org.springframework.boot.SpringApplication.<clinit>(SpringApplication.java:206)
+config-server_1             | 	at 	at il.co.migdal.ins.config.server.ConfigServer.main(ConfigServer.java:12)
+config-server_1             | 	at 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+config-server_1             | 	at 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+config-server_1             | 	at 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+config-server_1             | 	at 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+config-server_1             | 	at 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+config-server_1             | 	at 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+config-server_1             | 	at 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+config-server_1             | 	at 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+config-server_1             | 09:20:11,336 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [il.co.migdal.ins] to INFO
+config-server_1             | 09:20:11,336 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [il.co.migdal.ins] to false
+config-server_1             | 09:20:11,336 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[il.co.migdal.ins]
+config-server_1             | 09:20:11,336 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[il.co.migdal.ins]
+config-server_1             | 09:20:11,337 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+config-server_1             | 09:20:11,337 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+config-server_1             | 09:20:11,337 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+config-server_1             | 09:20:11,337 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+config-server_1             | 09:20:11,337 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6771beb3 - Registering current configuration as safe fallback point
+config-server_1             | 
+
