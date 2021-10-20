@@ -19,6 +19,7 @@ spring:
           # Replace the token with asterisks on each commit, then put it back after commit to GitHub.
           # Otherwise the GitHub will delete the token upon commit.
           password: '****'
+          # zeev_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_zeev
           clone-on-start: true
     fail-fast: true
   security:
