@@ -18,7 +18,7 @@
         </dependency>
         <dependency>
             <groupId>il.co.migdal.ins</groupId>
-            <artifactId>kafka-producer</artifactId>
+            <artifactId>kafka-consumer</artifactId>
         </dependency>
 
         <dependency>
